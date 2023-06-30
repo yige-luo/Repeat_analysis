@@ -50,7 +50,7 @@ output_dir <- paste0("results/", species, "/", "Table_Plot_Prototype", "/", Sys.
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 
 # Load data
-# input_date <- "2023-06-12b"
+# input_date <- "2023-06-29a"
 # input_dir <- paste0("results/", species, "/", "Table_Plot_Prototype", "/", input_date, "/")
 # repeat_df <- read_csv(file.path(input_dir, "scaffold_distribution_of_repeat_percentage.csv"))
 # annotation_df <- read_csv("data/scaffold_duplication_annotation.csv")
@@ -114,7 +114,11 @@ for (axis_b_name in axis_b_names) {
   tick_labels <- xaxis_grob$children$axis$grobs[[2]]$children[[1]]$label
   
   # Create a data frame of the x-axis tick labels and their corresponding "filter" values
-  tick_label_df <- annotation_df %>% filter(seqnames %in% tick_labels)
+  tick_label_df <- 
+    annotation_df %>% 
+    filter(seqnames %in% tick_labels) %>% 
+    arrange(seqnames)
+  
   
   # Map the "filter" values to colors
   tick_label_df$color <- filter_colors[tick_label_df$filter]
