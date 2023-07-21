@@ -1,0 +1,291 @@
+/var/spool/slurmd/job56436425/slurm_script: line 11: [: missing `]'
+Module perl-libs-5.22.1-lssc0-linux loaded. This module contains various Perl libraries. Use this command: 
+
+find /software/perl-libs/5.22.1/lssc0-linux -name "*.pm" 
+
+to get a listing of the module files.
+---
+Module rmblast-2.9.0-p2-lssc0-linux loaded. RMBlast is a RepeatMasker compatible version of the standard NCBI blastn program.
+---
+Module trf-4.0.9-static loaded. A tandem repeat in DNA is two or more adjacent, approximate copies of a pattern of nucleotides. Tandem Repeats Finder is a program to locate and display tandem repeats in DNA sequences.
+---
+Module repeatmasker-4.0.9.p2-lssc0-linux loaded. RepeatMasker is a program that screens DNA sequences for interspersed repeats and low complexity DNA sequences.
+---
+Module recon-1.08-lssc0-linux loaded. RECON: a package for automated de novo identification of repeat families from genomic sequences.
+---
+Module repeatscout-1.0.6-lssc0-linux loaded. RepeatScout is a tool to discover repetitive substrings in DNA.
+---
+Module genometools-1.5.9-lssc0-linux loaded. The GenomeTools genome analysis system is a free collection of bioinformatics tools (in the realm of genome informatics).
+---
+Module blast-2.9+-lssc0-linux loaded. The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between sequences. The program compares nucleotide or protein sequences to sequence databases and calculates the statistical significance of matches. BLAST can be used to infer functional and evolutionary relationships between sequences as well as help identify members of gene families.
+---
+Module hmmer-3.1b2-lssc0-linux loaded. Biosequence analysis using profile hidden Markov models.
+---
+Module cdhit-4.8.1-lssc0-linux loaded. CD-HIT is a very widely used program for clustering and comparing protein or nucleotide sequences.
+---
+Module ltr_retriever-2.8-lssc0-linux loaded. LTR Retriever is a highly accurate and sensitive program for identification of LTR retrotransposons.
+---
+Module mafft-7.453-lssc0-linux loaded. MAFFT is a multiple sequence alignment program for amino acid or nucleotide sequences.
+---
+Module ninja-0.97-cluster_only-lssc0-linux loaded. A tool for large-scale neighbor-joining phylogeny inference and clustering.
+---
+Module repeatmodeler-2.0-lssc0-linux loaded. RepeatModeler is a de-novo repeat family identification and modeling package. At the heart of RepeatModeler are two de-novo repeat finding programs ( RECON and RepeatScout ) which employ complementary computational methods for identifying repeat element boundaries and family relationships from sequence data. RepeatModeler assists in automating the runs of RECON and RepeatScout given a genomic database and uses the output to build, refine and classify consensus models of putative interspersed repeats.
+---
+/var/spool/slurmd/job56436425/slurm_script: line 25: $: command not found
+prolongata_dupremoved_genome_db.nhr not found!
+Running BuildDatabase...
+Building database prolongata_dupremoved_genome_db:
+  Reading ../../prolongata_renamed_assembly-DupRemoved.fasta...
+Number of sequences (bp) added to database: 27 ( 2580325 bp )
+Running RepeatModeler...
+RepeatModeler Version 2.0
+=========================
+Search Engine = rmblast
+LTR Structural Analysis: Enabled
+Random Number Seed: 1687989636
+Database = prolongata_dupremoved_genome_db .
+  - Sequences = 27
+  - Bases = 2580325
+Using output directory = /share/kopplab/yige/C202SC19030542/2023-06-27/References/RepeatModeler/Dpro/RM_7844.WedJun281500362023
+Storage Throughput = poor ( 6.02 MB/s )
+  - NOTE: Poor storage througput will have a large impact on RepeatModeler
+          performance.  The low throughput observed above may be due to
+          transient usage patterns on the system and may not reflect the
+          actual system performance. Whenever possible run RepeatModeler
+          in a directory stored on a fast local disk and not over a
+          network filesytem.
+
+Ready to start the sampling process.
+INFO: The runtime of RepeatModeler heavily depends on the quality of the assembly
+      and the repetitive content of the sequences.  It is not imperative
+      that RepeatModeler completes all rounds in order to obtain useful
+      results.  At the completion of each round, the files ( consensi.fa, and
+      families.stk ) found in:
+      /share/kopplab/yige/C202SC19030542/2023-06-27/References/RepeatModeler/Dpro/RM_7844.WedJun281500362023/ 
+      will contain all results produced thus far. These files may be 
+      manually copied and run through RepeatClassifier should the program
+      be terminated early.
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp
+   - Final Sample Size = 2580254 bp ( 2580254 non ambiguous )
+   - Num Contigs Represented = 27
+   - Sequence extraction : 00:00:02 (hh:mm:ss) Elapsed Time
+ -- Running RepeatScout on the sequences...
+   - RepeatScout: Running build_lmer_table ( l = 12 )..
+   - RepeatScout: Running RepeatScout.. : 60 raw families identified
+   - RepeatScout: Running filtering stage.. 57 families remaining
+   - Collecting repeat instances...
+ -- Refining Family R=1 / 0 ( RS Elements: 242, Using 100 )
+ -- Refining Family R=15 / 1 ( RS Elements: 233, Using 100 )
+ -- Refining Family R=3 / 2 ( RS Elements: 226, Using 100 )
+ -- Refining Family R=2 / 3 ( RS Elements: 225, Using 100 )
+ -- Refining Family R=20 / 4 ( RS Elements: 149, Using 100 )
+ -- Refining Family R=17 / 5 ( RS Elements: 138, Using 100 )
+ -- Refining Family R=34 / 6 ( RS Elements: 129, Using 100 )
+ -- Refining Family R=11 / 7 ( RS Elements: 127, Using 100 )
+ -- Refining Family R=7 / 8 ( RS Elements: 119, Using 100 )
+ -- Refining Family R=56 / 9 ( RS Elements: 106, Using 100 )
+ -- Refining Family R=27 / 10 ( RS Elements: 81, Using 81 )
+ -- Refining Family R=5 / 11 ( RS Elements: 80, Using 80 )
+ -- Refining Family R=21 / 12 ( RS Elements: 75, Using 75 )
+ -- Refining Family R=6 / 13 ( RS Elements: 74, Using 74 )
+ -- Refining Family R=9 / 14 ( RS Elements: 56, Using 56 )
+ -- Refining Family R=36 / 15 ( RS Elements: 47, Using 47 )
+ -- Refining Family R=4 / 16 ( RS Elements: 46, Using 46 )
+ -- Refining Family R=13 / 17 ( RS Elements: 44, Using 44 )
+ -- Refining Family R=23 / 18 ( RS Elements: 32, Using 32 )
+ -- Refining Family R=35 / 19 ( RS Elements: 26, Using 26 )
+ -- Refining Family R=12 / 20 ( RS Elements: 21, Using 21 )
+ -- Refining Family R=33 / 21 ( RS Elements: 20, Using 20 )
+ -- Refining Family R=18 / 22 ( RS Elements: 16, Using 16 )
+Family Refinement: 00:03:51 (hh:mm:ss) Elapsed Time
+
+
+RepeatModeler Round # 2
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 3000000 bp
+   - Sequence extraction : 00:00:02 (hh:mm:ss) Elapsed Time
+ -- Running TRFMask on the sequence...
+       259 Tandem Repeats Masked
+   - TRFMask time 00:00:06 (hh:mm:ss) Elapsed Time
+ -- Masking repeats from the previous rounds...
+  - Masking 1 - 5 of 77
+  - Masking 16 - 30 of 77
+  - Masking 41 - 65 of 77
+  - Masking 76 - 77 of 77
+   - TE Masking time 00:00:05 (hh:mm:ss) Elapsed Time
+ -- Sample Stats:
+       Sample Size 2580254 bp
+       Num Contigs Represented = 27
+       Non ambiguous bp:
+             Initial: 2580254 bp
+             After Masking: 2404947 bp
+             Masked: 6.79 % 
+ -- Input Database Coverage: 2580254 bp out of 2580325 bp ( 100.00 % )
+Sampling Time: 00:00:14 (hh:mm:ss) Elapsed Time
+Running all-by-other comparisons...
+        2% completed,  00:0:40 (hh:mm:ss) est. time remaining.
+        4% completed,  00:1:24 (hh:mm:ss) est. time remaining.
+        6% completed,  00:1:22 (hh:mm:ss) est. time remaining.
+        9% completed,  00:1:08 (hh:mm:ss) est. time remaining.
+       11% completed,  00:0:53 (hh:mm:ss) est. time remaining.
+       13% completed,  00:0:43 (hh:mm:ss) est. time remaining.
+       16% completed,  00:0:36 (hh:mm:ss) est. time remaining.
+       18% completed,  00:0:36 (hh:mm:ss) est. time remaining.
+       20% completed,  00:0:30 (hh:mm:ss) est. time remaining.
+       22% completed,  00:0:27 (hh:mm:ss) est. time remaining.
+       24% completed,  00:0:27 (hh:mm:ss) est. time remaining.
+       27% completed,  00:0:26 (hh:mm:ss) est. time remaining.
+       28% completed,  00:0:27 (hh:mm:ss) est. time remaining.
+       31% completed,  00:0:24 (hh:mm:ss) est. time remaining.
+       33% completed,  00:0:21 (hh:mm:ss) est. time remaining.
+       35% completed,  00:0:21 (hh:mm:ss) est. time remaining.
+       37% completed,  00:0:19 (hh:mm:ss) est. time remaining.
+       39% completed,  00:0:18 (hh:mm:ss) est. time remaining.
+       40% completed,  00:0:18 (hh:mm:ss) est. time remaining.
+       42% completed,  00:0:17 (hh:mm:ss) est. time remaining.
+       45% completed,  00:0:15 (hh:mm:ss) est. time remaining.
+       47% completed,  00:0:15 (hh:mm:ss) est. time remaining.
+       49% completed,  00:0:14 (hh:mm:ss) est. time remaining.
+       51% completed,  00:0:12 (hh:mm:ss) est. time remaining.
+       53% completed,  00:0:12 (hh:mm:ss) est. time remaining.
+       55% completed,  00:0:12 (hh:mm:ss) est. time remaining.
+       57% completed,  00:0:11 (hh:mm:ss) est. time remaining.
+       59% completed,  00:0:10 (hh:mm:ss) est. time remaining.
+       60% completed,  00:0:09 (hh:mm:ss) est. time remaining.
+       62% completed,  00:0:09 (hh:mm:ss) est. time remaining.
+       64% completed,  00:0:08 (hh:mm:ss) est. time remaining.
+       65% completed,  00:0:08 (hh:mm:ss) est. time remaining.
+       67% completed,  00:0:08 (hh:mm:ss) est. time remaining.
+       68% completed,  00:0:08 (hh:mm:ss) est. time remaining.
+       69% completed,  00:0:07 (hh:mm:ss) est. time remaining.
+       71% completed,  00:0:07 (hh:mm:ss) est. time remaining.
+       72% completed,  00:0:07 (hh:mm:ss) est. time remaining.
+       74% completed,  00:0:06 (hh:mm:ss) est. time remaining.
+       75% completed,  00:0:06 (hh:mm:ss) est. time remaining.
+       76% completed,  00:0:06 (hh:mm:ss) est. time remaining.
+       77% completed,  00:0:05 (hh:mm:ss) est. time remaining.
+       78% completed,  00:0:05 (hh:mm:ss) est. time remaining.
+       79% completed,  00:0:05 (hh:mm:ss) est. time remaining.
+       80% completed,  00:0:05 (hh:mm:ss) est. time remaining.
+       80% completed,  00:0:04 (hh:mm:ss) est. time remaining.
+       82% completed,  00:0:04 (hh:mm:ss) est. time remaining.
+       83% completed,  00:0:04 (hh:mm:ss) est. time remaining.
+       84% completed,  00:0:03 (hh:mm:ss) est. time remaining.
+       85% completed,  00:0:03 (hh:mm:ss) est. time remaining.
+       86% completed,  00:0:03 (hh:mm:ss) est. time remaining.
+       89% completed,  00:0:02 (hh:mm:ss) est. time remaining.
+       90% completed,  00:0:02 (hh:mm:ss) est. time remaining.
+       91% completed,  00:0:02 (hh:mm:ss) est. time remaining.
+       91% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       92% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       93% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       94% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       94% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       95% completed,  00:0:01 (hh:mm:ss) est. time remaining.
+       95% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       96% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       96% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       97% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       98% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+       98% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+      100% completed,  00:0:00 (hh:mm:ss) est. time remaining.
+Comparison Time: 00:00:23 (hh:mm:ss) Elapsed Time, 5331 HSPs Collected
+  - RECON: Running imagespread..
+RECON Elapsed: 00:00:00 (hh:mm:ss) Elapsed Time
+  - RECON: Running initial definition of elements ( eledef )..
+RECON Elapsed: 00:00:11 (hh:mm:ss) Elapsed Time
+  - RECON: Running re-definition of elements ( eleredef )..
+RECON Elapsed: 00:00:26 (hh:mm:ss) Elapsed Time
+  - RECON: Running re-definition of edges ( edgeredef )..
+RECON Elapsed: 00:00:15 (hh:mm:ss) Elapsed Time
+  - RECON: Running family definition ( famdef )..
+RECON Elapsed: 00:00:02 (hh:mm:ss) Elapsed Time
+  - Obtaining element sequences
+Number of families returned by RECON: 222
+Processing families with greater than 15 elements
+
+Processing RECON family: 7
+  - Saving 23 elements
+  - Refining family-7 model...
+
+Processing RECON family: 8
+  - Saving 17 elements
+  - Refining family-8 model...
+
+Processing RECON family: 23
+  - Saving 17 elements
+  - Refining family-23 model...
+Family Refinement: 00:00:18 (hh:mm:ss) Elapsed Time
+Round Time: 00:01:53 (hh:mm:ss) Elapsed Time
+
+RepeatScout/RECON discovery complete: 26 families found
+
+
+LTR Structural Analysis
+=======================
+Running LtrHarvest...     : 00:00:03 (hh:mm:ss) Elapsed Time
+Running Ltr_retriever...  : 00:01:30 (hh:mm:ss) Elapsed Time
+Aligning instances...
+v0.000 != v7.453 (2019/Nov/8)
+
+There is a problem in the configuration of your shell.
+Check the MAFFT_BINARIES environmental variable by
+$ echo $MAFFT_BINARIES
+
+This variable must be *unset*, unless you have installed MAFFT
+with a special configuration.  To unset this variable, type
+$ unset MAFFT_BINARIES
+or
+% unsetenv MAFFT_BINARIES
+Then retry
+$ mafft input > output
+
+To keep this change permanently, edit setting files
+(.bash_profile, .profile, .cshrc, etc) in your home directory
+to delete the MAFFT_BINARIES line.
+On MacOSX, also edit or remove the .MacOSX/environment.plist file
+and then re-login (MacOSX 10.6) or reboot (MacOSX 10.7).
+
+Please send a problem report to katoh@ifrec.osaka-u.ac.jp,
+if this problem remains.
+
+LTRPipeline: Error - could not produce a multiple alignment from the denovo LTR results.
+LTRPipeline Time: 00:01:34 (hh:mm:ss) Elapsed Time
+
+
+RepeatClassifier Version 2.0
+======================================
+Search Engine = rmblast
+  - Looking for Simple and Low Complexity sequences..
+  - Looking for similarity to known repeat proteins..
+  - Looking for similarity to known repeat consensi..
+Classification Time: 00:00:59 (hh:mm:ss) Elapsed Time
+
+
+Program Time: 00:10:13 (hh:mm:ss) Elapsed Time
+Working directory:  /share/kopplab/yige/C202SC19030542/2023-06-27/References/RepeatModeler/Dpro/RM_7844.WedJun281500362023
+may be deleted unless there were problems with the run.
+
+The results have been saved to:
+  prolongata_dupremoved_genome_db-families.fa  - Consensus sequences for each family identified.
+  prolongata_dupremoved_genome_db-families.stk - Seed alignments for each family identified.
+
+The RepeatModeler stockholm file is formatted so that it can
+easily be submitted to the Dfam database.  Please consider contributing
+curated families to this open database and be a part of this growing
+community resource.  For more information contact help@dfam.org.
+
+
