@@ -58,16 +58,17 @@ plot2 <-
   ggplot(aes(`repeat`, fill = `filter`)) +
   geom_histogram(aes(y = after_stat(density)), color = "black", 
                  binwidth = 10) +
-  labs(x = "Repeat content (%)", y = "") + 
+  labs(x = "Repeat content (%)") +
   scale_x_continuous(breaks = seq(0, 100, 25)) +
+  scale_y_continuous(breaks = c(0, 0.02, 0.04)) +
   facet_wrap(~filter, nrow = 1) +
   theme_minimal() + 
   theme(legend.position = "none", panel.grid = element_blank(),
         strip.text = element_blank(), strip.background = element_blank(), 
         axis.ticks.x = element_line(),
-        axis.text.y = element_blank(), axis.ticks.y = element_blank(),
+        # axis.text.y = element_blank(), axis.ticks.y = element_blank(),
         plot.margin = margin(-0.5, 0, 0, 0, "in"))
-# plot2
+plot2
 
 # Combine the two plots
 combined_plot <- 
