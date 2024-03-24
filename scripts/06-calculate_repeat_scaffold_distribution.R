@@ -326,7 +326,7 @@ processGenome <- function(genomeFile, species, bedFile1, bedFile2) {
     mutate(repeatClass = factor(repeatClass, levels = groups)) %>% 
     ggplot(aes(ymin = ymin, ymax = ymax, xmin = xmin, xmax = xmax, fill = repeatClass)) +
     geom_rect(color = "black", lwd = 0.1, alpha = 0.75) +
-    labs(x = "", y = "Proportion (%)", fill = "") +
+    labs(x = ">1Mb scaffold shown", y = "Proportion (%)", fill = "") +
     scale_fill_manual(values = fill_mapping) + 
     scale_x_continuous(breaks = xlab_text$x, labels = xlab_text$seqnames) +
     guides(fill = guide_legend(override.aes = list(alpha = 0.75),
